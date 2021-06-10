@@ -1,1 +1,27 @@
-<h1>Teste</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>Cpf:</th>
+                <th>Email:</th>
+                <th>Telefone:</th>
+                <!-- <th>Endereços:</th> -->
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for seller in sellers %}
+            <tr>
+                <td>{{seller.name}}</td>
+                <td>{{seller.cpf}}</td>
+                <td>{{seller.email}}</td>
+                <td>{{seller.celphone}}</td>
+                <!-- <td>{{seller.name}}</td> -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
